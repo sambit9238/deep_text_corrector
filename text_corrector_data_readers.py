@@ -111,7 +111,7 @@ class MovieDialogReader(DataReader):
         return MovieDialogReader.UNKNOWN_TOKEN
 
     def read_tokens(self, path):
-        with open(path, "r") as f:
+        with open(path, "r", encoding="latin1") as f:
             for line in f:
                 yield line.lower().strip().split()
 
